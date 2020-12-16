@@ -31,7 +31,7 @@ Route::group([
 });
 
 Route::group([
-    'middleware'=> 'api',
+    'middleware'=> ['api', 'cors'],
     'prefix' => 'auth'
 ], function(){
     Route::post('/login', [AuthorizationController::class, 'login']);

@@ -18,16 +18,15 @@ class AdminUserRequest extends FormRequest
         switch ($this->method()) {
             case 'POST':
                 return [
-                    'name' => 'required|unique:admin_users',
-                    'username' => 'required|unique:admin_users',
+                    'name' => 'required|unique:admin_users, name',
+                    'username' => 'required|unique:admin_users, username',
                     'password' => 'required|confirmed|min:6'
                 ];
             case 'PATCH':
-                $user = $this->route('user');
+                $user = $this->route('admin_user');
                 return [
-                    'name' => 'required|unique:admin_users,id,'.$user->id,
-                    'username' => 'required|unique:admin_users, id, '.$user->id,
-                    'password' => 'required|confirmed|min:6'
+                    'name' => 'required|unique:admin_users,name,'.$user->id,
+                    'username' => 'required|unique:admin_users,username,'.$user->id,
                 ];
         }
     }

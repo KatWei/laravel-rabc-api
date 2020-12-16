@@ -21,6 +21,7 @@ use App\Http\Controllers\PermissionsController;
 Route::group([
     'middleware' => 'auth:admin-api'
 ], function(){
+
     Route::get('/user', [AdminUsersController::class, 'show']);
     Route::resource('/admin_users', AdminUsersController::class)->only('index', 'store', 'update', 'destroy');
     Route::get('/roles/all_roles', [RolesController::class, 'getAllRole']);
@@ -35,7 +36,7 @@ Route::group([
 ], function(){
     Route::post('/login', [AuthorizationController::class, 'login']);
     Route::post('/register', [AuthorizationController::class, 'register']);
-    Route::post('/logout', [AuthorizationController::class, 'logout']);
+    Route::delete('/logout', [AuthorizationController::class, 'logout']);
     Route::post('/refresh', [AuthorizationController::class, 'refresh']);
 });
 

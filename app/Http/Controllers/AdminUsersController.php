@@ -28,11 +28,23 @@ class AdminUsersController extends ApiController
         $user = auth('admin-api')->user();
         $menu = new Menu();
         $menuTree = $menu->toTree();
-        $filterMenu = collect($menuTree)->filter(function($menu, $menu_key) use ($user){
-            return $user->can(Arr::get($menu, 'permission'));
-        });
-        $user['menus'] = $filterMenu->values()->all();
+        $user['menus'] = $this->filterMenu($menuTree, $user);
         return $this->success($user);
+    }
+
+    protected function filterMenu($menus, $user)
+    {
+        foreach($menus as $menu) {
+            if($user->can($menu['permission'])) {
+                if(!isset($menu['children'])) {
+                    $filterMenus[] = $menu;
+                }else {
+                    $menu['children'] = $this->filterMenu($menu['children'], $user);
+                    $filterMenus[] = $menu;
+                }
+            }
+        }
+        return $filterMenus;
     }
 
     public function store(AdminUserRequest $request, AdminUser $adminUser, Role $role)

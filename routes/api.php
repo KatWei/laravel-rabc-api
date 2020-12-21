@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthorizationController;
 use App\Http\Controllers\AdminUsersController;
 use App\Http\Controllers\RolesController;
 use App\Http\Controllers\PermissionsController;
+use App\Http\Controllers\MenusController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,11 +20,13 @@ use App\Http\Controllers\PermissionsController;
 */
 
 Route::group([
-    'middleware' => 'auth:admin-api'
+    'middleware' => ['auth:admin-api', 'cors']
 ], function(){
 
     Route::get('/user', [AdminUsersController::class, 'show']);
     Route::resource('/admin_users', AdminUsersController::class)->only('index', 'store', 'update', 'destroy');
+    Route::get('/menus/all_menus', [MenusController::class, 'getAllMenu']);
+    Route::resource('/menus', MenusController::class);
     Route::get('/roles/all_roles', [RolesController::class, 'getAllRole']);
     Route::resource('/roles', RolesController::class)->only('index', 'store', 'update', 'destroy');
     Route::resource('/permissions', PermissionsController::class)->only('index', 'store', 'update', 'destroy');

@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43bb16eb-6702-4507-981f-4bc123d50531" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Helpers/ModelTree.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/AdminUserResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/composerJson.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminUsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminUsersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/AdminUserRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/AdminUserRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/AdminUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/AdminUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/RoleRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/RoleRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +23,20 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,7 +64,6 @@
       <path value="$PROJECT_DIR$/vendor/psr/http-message" />
       <path value="$PROJECT_DIR$/vendor/psr/http-client" />
       <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
-      <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
       <path value="$PROJECT_DIR$/vendor/league/flysystem" />
       <path value="$PROJECT_DIR$/vendor/psr/container" />
       <path value="$PROJECT_DIR$/vendor/league/mime-type-detection" />
@@ -128,13 +144,14 @@
       <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
-      <path value="$PROJECT_DIR$/vendor/fruitcake/laravel-cors" />
       <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
       <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
       <path value="$PROJECT_DIR$/vendor/tymon/jwt-auth" />
       <path value="$PROJECT_DIR$/vendor/namshi/jose" />
       <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-permission" />
+      <path value="$PROJECT_DIR$/vendor/fruitcake/laravel-cors" />
+      <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kzZ21hAysdKZMf2Z2nZKSJbmsR" />
@@ -184,6 +201,10 @@
       <workItem from="1607917473727" duration="6388000" />
       <workItem from="1608014739373" duration="9410000" />
       <workItem from="1608109097069" duration="3435000" />
+      <workItem from="1608136476379" duration="1190000" />
+      <workItem from="1608175935822" duration="10749000" />
+      <workItem from="1608258416537" duration="16546000" />
+      <workItem from="1608520504995" duration="2246000" />
     </task>
     <servers />
   </component>
@@ -195,13 +216,17 @@
       <screen x="1920" y="23" width="1920" height="1057" />
     </state>
     <state x="2480" y="217" key="#Inspections/1920.23.1920.1057/0.23.1920.1057@1920.23.1920.1057" timestamp="1606706280311" />
-    <state x="2560" y="308" width="639" height="486" key="find.popup" timestamp="1607594497607">
+    <state x="2642" y="111" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1608187964756">
       <screen x="1920" y="23" width="1920" height="1057" />
     </state>
-    <state x="2560" y="308" width="639" height="486" key="find.popup/1920.23.1920.1057/0.23.1920.1057@1920.23.1920.1057" timestamp="1607594497607" />
-    <state x="2545" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1608112465249">
+    <state x="2642" y="111" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.23.1920.1057/0.23.1920.1057@1920.23.1920.1057" timestamp="1608187964756" />
+    <state x="2560" y="308" width="639" height="486" key="find.popup" timestamp="1608288585167">
       <screen x="1920" y="23" width="1920" height="1057" />
     </state>
-    <state x="2545" y="258" width="670" height="676" key="search.everywhere.popup/1920.23.1920.1057/0.23.1920.1057@1920.23.1920.1057" timestamp="1608112465249" />
+    <state x="2560" y="308" width="639" height="486" key="find.popup/1920.23.1920.1057/0.23.1920.1057@1920.23.1920.1057" timestamp="1608288585167" />
+    <state x="2545" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1608524228885">
+      <screen x="1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="2545" y="258" width="670" height="676" key="search.everywhere.popup/1920.23.1920.1057/0.23.1920.1057@1920.23.1920.1057" timestamp="1608524228885" />
   </component>
 </project>

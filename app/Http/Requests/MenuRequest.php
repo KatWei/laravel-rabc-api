@@ -4,9 +4,8 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class RoleRequest extends FormRequest
+class MenuRequest extends FormRequest
 {
-
 
     /**
      * Get the validation rules that apply to the request.
@@ -18,21 +17,13 @@ class RoleRequest extends FormRequest
         switch ($this->method()) {
             case 'POST':
                 return [
-                    'name' => 'required|unique:roles, name'
+                    'name' => 'required|unique:menus,name'
                 ];
             case 'PATCH':
-                $role = $this->route('role');
+                $role = $this->route('menu');
                 return [
-                    'name' => 'required|unique:roles,name,'.$role->id
+                    'name' => 'required|unique:menus,name,'.$role->id
                 ];
         }
-    }
-
-    public function messages()
-    {
-        return [
-            'name.required' => '角色名不能为空',
-            'name.unique' => "角色名已存在"
-        ];
     }
 }

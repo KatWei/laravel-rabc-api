@@ -13,7 +13,7 @@ class Menu extends Model
         ModelTree::boot as treeBoot;
     }
 
-    protected $fillable = ['parent_id', 'order', 'name', 'icon', 'uri', 'permission'];
+    protected $fillable = ['parent_id', 'order', 'name', 'icon', 'path', 'permission'];
 
     /**
      * Detach models from the relationship.

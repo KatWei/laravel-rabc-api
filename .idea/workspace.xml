@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43bb16eb-6702-4507-981f-4bc123d50531" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/composerJson.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminUsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminUsersController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/RoleRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/RoleRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/AdminUserResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/AdminUserResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/AdminUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/AdminUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Permission.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Permission.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +34,9 @@
     </option>
     <expand />
     <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="shop_api" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -204,7 +204,8 @@
       <workItem from="1608136476379" duration="1190000" />
       <workItem from="1608175935822" duration="10749000" />
       <workItem from="1608258416537" duration="16546000" />
-      <workItem from="1608520504995" duration="2246000" />
+      <workItem from="1608520504995" duration="6756000" />
+      <workItem from="1608603827940" duration="5152000" />
     </task>
     <servers />
   </component>
@@ -220,13 +221,13 @@
       <screen x="1920" y="23" width="1920" height="1057" />
     </state>
     <state x="2642" y="111" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.23.1920.1057/0.23.1920.1057@1920.23.1920.1057" timestamp="1608187964756" />
-    <state x="2560" y="308" width="639" height="486" key="find.popup" timestamp="1608288585167">
+    <state x="2560" y="308" width="639" height="486" key="find.popup" timestamp="1608608990471">
       <screen x="1920" y="23" width="1920" height="1057" />
     </state>
-    <state x="2560" y="308" width="639" height="486" key="find.popup/1920.23.1920.1057/0.23.1920.1057@1920.23.1920.1057" timestamp="1608288585167" />
-    <state x="2545" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1608524228885">
+    <state x="2560" y="308" width="639" height="486" key="find.popup/1920.23.1920.1057/0.23.1920.1057@1920.23.1920.1057" timestamp="1608608990471" />
+    <state x="2545" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1608611439080">
       <screen x="1920" y="23" width="1920" height="1057" />
     </state>
-    <state x="2545" y="258" width="670" height="676" key="search.everywhere.popup/1920.23.1920.1057/0.23.1920.1057@1920.23.1920.1057" timestamp="1608524228885" />
+    <state x="2545" y="258" width="670" height="676" key="search.everywhere.popup/1920.23.1920.1057/0.23.1920.1057@1920.23.1920.1057" timestamp="1608611439080" />
   </component>
 </project>

@@ -18,8 +18,8 @@ class AdminUserResource extends JsonResource
             'id' => $this->id,
             'username' => $this->username,
             'name' => $this->name,
-            'role_ids' => $this->roles->pluck('id'),
-            'roles' => $this->roles,
+//            'role_ids' => $this->roles->pluck('id'),
+//            'roles' => $this->roles,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at
         ];

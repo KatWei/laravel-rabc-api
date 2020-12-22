@@ -14,7 +14,8 @@ class AdminUsersController extends ApiController
 {
     public function index(AdminUser $adminUser)
     {
-        $users = $adminUser->with("roles")->when($name = request('name'), function($q) use ($name){
+        dd(1);
+        $users = $adminUser->when($name = request('name'), function($q) use ($name){
             $q->where('name', 'like', "$name%");
         })
             ->latest()

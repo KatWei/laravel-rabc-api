@@ -12,6 +12,14 @@ use Spatie\Permission\Models\Role;
 
 class AdminUsersController extends ApiController
 {
+    /**
+     * @OA\Get(path="/api/admin_users",description="用户列表",tags={"用户"},security={{"bearer_token": {}}},summary="用户列表",
+     *     @OA\Parameter(name="name",in="query", description="用户名", example="admin",@OA\Schema(type="string")),
+     *     @OA\Response(response=200,description="用户列表")
+     * )
+     * @param AdminUser $adminUser
+     * @return mixed
+     */
     public function index(AdminUser $adminUser)
     {
         $users = $adminUser->when($name = request('name'), function($q) use ($name){
@@ -48,6 +56,17 @@ class AdminUsersController extends ApiController
         return $filterMenus;
     }
 
+
+    /**
+     * @OA\Post(path="/api/admin_users",description="添加用户",summary="添加用户",security={ {"bearer": {} }},tags={"用户"},
+     *     @OA\Parameter(name="name",in="query", description="用户名称",required=true,@OA\Schema(type="string")),
+     *     @OA\Parameter(name="username",in="query", description="用户昵称",required=true,@OA\Schema(type="string")),
+     *     @OA\Parameter(name="password",in="query", description="密码",required=true,@OA\Schema(type="string")),
+     *     @OA\Parameter(name="role_ids",in="query", description="角色ids",@OA\Schema(type="string")),
+     *     @OA\Response(response=200,description="添加成功"),
+     *     @OA\Response(response=422,description="错误的凭证响应")
+     * )
+     */
     public function store(AdminUserRequest $request, AdminUser $adminUser, Role $role)
     {
         $adminUser->fill($request->all());
@@ -62,6 +81,18 @@ class AdminUsersController extends ApiController
         return $this->success("添加成功");
     }
 
+    /**
+     * @OA\Patch(path="/api/admin_users/{admin_user}",description="修改用户",summary="修改用户",security={ {"bearer": {} }},tags={"用户"},
+     *     @OA\Parameter(name="id",in="query", description="用户id",required=true, example="1",@OA\Schema(type="integer")),
+     *     @OA\Parameter(name="name",in="query", description="用户名称",required=true,@OA\Schema(type="string")),
+     *     @OA\Parameter(name="username",in="query", description="用户昵称",required=true,@OA\Schema(type="string")),
+     *     @OA\Response(response=200,description="修改成功"),
+     * )
+     * @param AdminUserRequest $request
+     * @param AdminUser $adminUser
+     * @param Role $role
+     * @return mixed
+     */
     public function update(AdminUserRequest $request, AdminUser $adminUser, Role $role)
     {
         $adminUser->update($request->all());
@@ -74,6 +105,14 @@ class AdminUsersController extends ApiController
         return $this->success("修改成功");
     }
 
+    /**
+     * @OA\Delete(path="/api/admin_users/ids_destroy",description="删除用户",summary="删除用户",security={ {"bearer": {} }},tags={"用户"},
+     *     @OA\Parameter(name="ids",in="query", description="用户id",required=true, example="1",@OA\Schema(type="integer")),
+     *     @OA\Response(response=200,description="删除成功"),
+     * )
+     * @param $id
+     * @return mixed
+     */
     public function destroy($id)
     {
         if($id == "ids_destroy") {

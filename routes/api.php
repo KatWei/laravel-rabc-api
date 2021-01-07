@@ -20,7 +20,11 @@ use App\Http\Controllers\MenusController;
 */
 
 Route::group([
-    'middleware' => ['auth:admin-api', 'cors', 'admin.permission']
+    'middleware' => [
+        'auth:admin-api',
+        'cors',
+//        'admin.permission'
+    ]
 ], function(){
 
     Route::get('/user', [AdminUsersController::class, 'show']);

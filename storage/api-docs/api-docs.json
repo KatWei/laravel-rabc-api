@@ -1,0 +1,756 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "ant-design v5 接口demo",
+        "version": "0.0.1"
+    },
+    "paths": {
+        "/api/admin_users": {
+            "get": {
+                "tags": [
+                    "用户"
+                ],
+                "summary": "用户列表",
+                "description": "用户列表",
+                "operationId": "App\\Http\\Controllers\\AdminUsersController::index",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "用户名",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "admin"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "用户列表"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "用户"
+                ],
+                "summary": "添加用户",
+                "description": "添加用户",
+                "operationId": "App\\Http\\Controllers\\AdminUsersController::store",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "用户名称",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "description": "用户昵称",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "description": "密码",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "role_ids",
+                        "in": "query",
+                        "description": "角色ids",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "添加成功"
+                    },
+                    "422": {
+                        "description": "错误的凭证响应"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer": []
+                    }
+                ]
+            }
+        },
+        "/api/admin_users/{admin_user}": {
+            "patch": {
+                "tags": [
+                    "用户"
+                ],
+                "summary": "修改用户",
+                "description": "修改用户",
+                "operationId": "App\\Http\\Controllers\\AdminUsersController::update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "用户id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "example": "1"
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "用户名称",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "description": "用户昵称",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "修改成功"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer": []
+                    }
+                ]
+            }
+        },
+        "/api/admin_users/ids_destroy": {
+            "delete": {
+                "tags": [
+                    "用户"
+                ],
+                "summary": "删除用户",
+                "description": "删除用户",
+                "operationId": "App\\Http\\Controllers\\AdminUsersController::destroy",
+                "parameters": [
+                    {
+                        "name": "ids",
+                        "in": "query",
+                        "description": "用户id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "example": "1"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "删除成功"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer": []
+                    }
+                ]
+            }
+        },
+        "/api/auth/login": {
+            "post": {
+                "tags": [
+                    "登录"
+                ],
+                "summary": "登录",
+                "description": "登录",
+                "operationId": "App\\Http\\Controllers\\AuthorizationController::login",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "用户名",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "admin"
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "description": "密码",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "123456"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "token 凭证"
+                    }
+                }
+            }
+        },
+        "/api/auth/register": {
+            "post": {
+                "tags": [
+                    "登录"
+                ],
+                "summary": "注册",
+                "description": "注册",
+                "operationId": "App\\Http\\Controllers\\AuthorizationController::register",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "用户名",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "admin"
+                    },
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "description": "昵称",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "超级管理员"
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "description": "密码",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "123456"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "用户信息"
+                    }
+                }
+            }
+        },
+        "/api/auth/logout": {
+            "delete": {
+                "tags": [
+                    "登录"
+                ],
+                "summary": "退出",
+                "description": "退出",
+                "operationId": "App\\Http\\Controllers\\AuthorizationController::logout",
+                "responses": {
+                    "200": {
+                        "description": "退出成功"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/auth/refresh": {
+            "post": {
+                "tags": [
+                    "登录"
+                ],
+                "summary": "刷新Toekn",
+                "description": "刷新Toekn",
+                "operationId": "App\\Http\\Controllers\\AuthorizationController::refresh",
+                "responses": {
+                    "200": {
+                        "description": "token 信息"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
+        "/api/menus": {
+            "get": {
+                "tags": [
+                    "菜单"
+                ],
+                "summary": "菜单列表",
+                "description": "菜单列表",
+                "operationId": "App\\Http\\Controllers\\MenusController::index",
+                "responses": {
+                    "200": {
+                        "description": "角色列表"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "菜单"
+                ],
+                "summary": "添加菜单",
+                "description": "添加菜单",
+                "operationId": "App\\Http\\Controllers\\MenusController::store",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "菜单名",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "parent_id",
+                        "in": "query",
+                        "description": "上级菜单id",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "添加成功"
+                    },
+                    "422": {
+                        "description": "错误的凭证响应"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer": []
+                    }
+                ]
+            }
+        },
+        "/api/menus/{menu}": {
+            "post": {
+                "tags": [
+                    "菜单"
+                ],
+                "summary": "添加菜单",
+                "description": "添加菜单",
+                "operationId": "App\\Http\\Controllers\\MenusController::update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "菜单id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "example": "1"
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "菜单名",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "parent_id",
+                        "in": "query",
+                        "description": "上级菜单id",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "添加成功"
+                    },
+                    "422": {
+                        "description": "错误的凭证响应"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer": []
+                    }
+                ]
+            }
+        },
+        "/api/permissions": {
+            "get": {
+                "tags": [
+                    "权限"
+                ],
+                "summary": "权限列表",
+                "description": "权限列表",
+                "operationId": "App\\Http\\Controllers\\PermissionsController::index",
+                "responses": {
+                    "200": {
+                        "description": "权限列表"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "权限"
+                ],
+                "summary": "添加权限",
+                "description": "添加权限",
+                "operationId": "App\\Http\\Controllers\\PermissionsController::store",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "权限名称",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "slug",
+                        "in": "query",
+                        "description": "权限别称",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "添加成功"
+                    },
+                    "422": {
+                        "description": "错误的凭证响应"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer": []
+                    }
+                ]
+            }
+        },
+        "/api/permissions/{permission}": {
+            "patch": {
+                "tags": [
+                    "权限"
+                ],
+                "summary": "修改权限",
+                "description": "修改权限",
+                "operationId": "App\\Http\\Controllers\\PermissionsController::update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "权限id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "example": "1"
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "权限名称",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "slug",
+                        "in": "query",
+                        "description": "权限别称",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "修改成功"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer": []
+                    }
+                ]
+            }
+        },
+        "/api/permissions/ids_destroy": {
+            "delete": {
+                "tags": [
+                    "权限"
+                ],
+                "summary": "删除权限",
+                "description": "删除权限",
+                "operationId": "App\\Http\\Controllers\\PermissionsController::destroy",
+                "parameters": [
+                    {
+                        "name": "ids",
+                        "in": "query",
+                        "description": "权限id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "example": "1"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "删除成功"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer": []
+                    }
+                ]
+            }
+        },
+        "/api/permissions/role_by_permissions/{roleId?}": {
+            "get": {
+                "tags": [
+                    "权限"
+                ],
+                "summary": "根据角色获取拥有权限",
+                "description": "根据角色获取拥有权限",
+                "operationId": "App\\Http\\Controllers\\PermissionsController::getRoleByPermissions",
+                "parameters": [
+                    {
+                        "name": "role_id",
+                        "in": "query",
+                        "description": "角色id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "example": "1"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "权限列表"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer": []
+                    }
+                ]
+            }
+        },
+        "/api/roles": {
+            "get": {
+                "tags": [
+                    "角色"
+                ],
+                "summary": "角色列表",
+                "description": "角色列表",
+                "operationId": "App\\Http\\Controllers\\RolesController::index",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "角色",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "超级管理员"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "角色列表"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "角色"
+                ],
+                "summary": "添加角色",
+                "description": "添加角色",
+                "operationId": "App\\Http\\Controllers\\RolesController::store",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "角色名",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "permission_ids",
+                        "in": "query",
+                        "description": "权限ids",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "添加成功"
+                    },
+                    "422": {
+                        "description": "错误的凭证响应"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer": []
+                    }
+                ]
+            }
+        },
+        "/api/roles/{role}": {
+            "patch": {
+                "tags": [
+                    "角色"
+                ],
+                "summary": "修改角色",
+                "description": "修改角色",
+                "operationId": "App\\Http\\Controllers\\RolesController::update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "角色id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "example": "1"
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "角色名称",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "permission_ids",
+                        "in": "query",
+                        "description": "权限ids",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "修改成功"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer": []
+                    }
+                ]
+            }
+        },
+        "/api/roles/ids_destroy": {
+            "delete": {
+                "tags": [
+                    "角色"
+                ],
+                "summary": "删除角色",
+                "description": "删除角色",
+                "operationId": "App\\Http\\Controllers\\RolesController::destroy",
+                "parameters": [
+                    {
+                        "name": "ids",
+                        "in": "query",
+                        "description": "角色id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "example": "1"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "删除成功"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer": []
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "bearer_token": {
+                "type": "apiKey",
+                "description": "Enter token in format (Bearer <token>)",
+                "name": "Authorization",
+                "in": "header"
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}

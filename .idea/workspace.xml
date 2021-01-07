@@ -4,11 +4,6 @@
     <list default="true" id="43bb16eb-6702-4507-981f-4bc123d50531" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminUsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminUsersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/AdminUserResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/AdminUserResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/AdminUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/AdminUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Permission.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Permission.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +200,9 @@
       <workItem from="1608175935822" duration="10749000" />
       <workItem from="1608258416537" duration="16546000" />
       <workItem from="1608520504995" duration="6756000" />
-      <workItem from="1608603827940" duration="5152000" />
+      <workItem from="1608603827940" duration="6318000" />
+      <workItem from="1608718074909" duration="390000" />
+      <workItem from="1610001702365" duration="32000" />
     </task>
     <servers />
   </component>
@@ -225,9 +222,9 @@
       <screen x="1920" y="23" width="1920" height="1057" />
     </state>
     <state x="2560" y="308" width="639" height="486" key="find.popup/1920.23.1920.1057/0.23.1920.1057@1920.23.1920.1057" timestamp="1608608990471" />
-    <state x="2545" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1608611439080">
+    <state x="2545" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1610001708334">
       <screen x="1920" y="23" width="1920" height="1057" />
     </state>
-    <state x="2545" y="258" width="670" height="676" key="search.everywhere.popup/1920.23.1920.1057/0.23.1920.1057@1920.23.1920.1057" timestamp="1608611439080" />
+    <state x="2545" y="258" width="670" height="676" key="search.everywhere.popup/1920.23.1920.1057/0.23.1920.1057@1920.23.1920.1057" timestamp="1610001708334" />
   </component>
 </project>

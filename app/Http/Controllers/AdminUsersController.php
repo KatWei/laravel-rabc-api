@@ -14,7 +14,6 @@ class AdminUsersController extends ApiController
 {
     public function index(AdminUser $adminUser)
     {
-        dd(1);
         $users = $adminUser->when($name = request('name'), function($q) use ($name){
             $q->where('name', 'like', "$name%");
         })
@@ -29,7 +28,8 @@ class AdminUsersController extends ApiController
         $user = auth('admin-api')->user();
         $menu = new Menu();
         $menuTree = $menu->toTree();
-        $user['menus'] = $this->filterMenu($menuTree, $user);
+        if(!isset($menuTree))
+            $user['menus'] = $this->filterMenu($menuTree, $user);
         return $this->success($user);
     }
 

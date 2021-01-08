@@ -31,6 +31,12 @@ class AdminUsersController extends ApiController
         return $this->success(AdminUserResource::collection($users));
     }
 
+    /**
+     * @OA\Get(path=" api/user",description="个人用户信息",tags={"用户"},security={{"bearer_token": {}}},summary="个人用户信息",
+     *     @OA\Response(response=200,description="用户列表")
+     * )
+     * @return mixed
+     */
     public function show()
     {
         $user = auth('admin-api')->user();

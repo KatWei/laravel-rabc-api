@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43bb16eb-6702-4507-981f-4bc123d50531" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shop_api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shop_api.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminUsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminUsersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthorizationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthorizationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MenusController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MenusController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PermissionsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PermissionsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RolesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RolesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +211,8 @@
       <workItem from="1608718074909" duration="390000" />
       <workItem from="1610001702365" duration="830000" />
       <workItem from="1610009117688" duration="4848000" />
-      <workItem from="1610019472422" duration="6963000" />
+      <workItem from="1610019472422" duration="7041000" />
+      <workItem from="1610076064044" duration="1094000" />
     </task>
     <servers />
   </component>
@@ -243,10 +236,11 @@
       <screen x="1920" y="23" width="1920" height="1057" />
     </state>
     <state x="2560" y="308" width="639" height="486" key="find.popup/1920.23.1920.1057/0.23.1920.1057@1920.23.1920.1057" timestamp="1608608990471" />
-    <state x="547" y="228" width="670" height="590" key="search.everywhere.popup" timestamp="1610023131152">
-      <screen x="0" y="23" width="1680" height="922" />
+    <state x="2305" y="258" width="766" height="677" key="search.everywhere.popup" timestamp="1610076487067">
+      <screen x="1680" y="23" width="1920" height="1057" />
     </state>
     <state x="547" y="228" width="670" height="590" key="search.everywhere.popup/0.23.1680.922@0.23.1680.922" timestamp="1610023131152" />
+    <state x="2305" y="258" width="766" height="677" key="search.everywhere.popup/1680.23.1920.1057/0.23.1680.922@1680.23.1920.1057" timestamp="1610076487067" />
     <state x="2545" y="258" width="670" height="676" key="search.everywhere.popup/1920.23.1920.1057/0.23.1920.1057@1920.23.1920.1057" timestamp="1610013748154" />
   </component>
 </project>

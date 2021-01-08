@@ -94,6 +94,26 @@
                 ]
             }
         },
+        " api/user": {
+            "get": {
+                "tags": [
+                    "用户"
+                ],
+                "summary": "个人用户信息",
+                "description": "个人用户信息",
+                "operationId": "App\\Http\\Controllers\\AdminUsersController::show",
+                "responses": {
+                    "200": {
+                        "description": "用户列表"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
+        },
         "/api/admin_users/{admin_user}": {
             "patch": {
                 "tags": [
@@ -337,6 +357,30 @@
                         }
                     },
                     {
+                        "name": "icon",
+                        "in": "query",
+                        "description": "图标",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "path",
+                        "in": "query",
+                        "description": "路径",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "description": "排序",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
                         "name": "parent_id",
                         "in": "query",
                         "description": "上级菜单id",
@@ -384,6 +428,30 @@
                         "in": "query",
                         "description": "菜单名",
                         "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "icon",
+                        "in": "query",
+                        "description": "图标",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "path",
+                        "in": "query",
+                        "description": "路径",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "description": "排序",
                         "schema": {
                             "type": "string"
                         }
@@ -456,6 +524,22 @@
                         "schema": {
                             "type": "string"
                         }
+                    },
+                    {
+                        "name": "http_method",
+                        "in": "query",
+                        "description": "方法",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "http_path",
+                        "in": "query",
+                        "description": "路径",
+                        "schema": {
+                            "type": "string"
+                        }
                     }
                 ],
                 "responses": {
@@ -506,6 +590,22 @@
                         "in": "query",
                         "description": "权限别称",
                         "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "http_method",
+                        "in": "query",
+                        "description": "方法",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "http_path",
+                        "in": "query",
+                        "description": "路径",
                         "schema": {
                             "type": "string"
                         }

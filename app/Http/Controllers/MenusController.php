@@ -31,6 +31,9 @@ class MenusController extends ApiController
     /**
      * @OA\Post(path="/api/menus",description="添加菜单",summary="添加菜单",security={ {"bearer": {} }},tags={"菜单"},
      *     @OA\Parameter(name="name",in="query", description="菜单名",required=true,@OA\Schema(type="string")),
+     *     @OA\Parameter(name="icon",in="query", description="图标",@OA\Schema(type="string")),
+     *     @OA\Parameter(name="path",in="query", description="路径",@OA\Schema(type="string")),
+     *     @OA\Parameter(name="order",in="query", description="排序",@OA\Schema(type="string")),
      *     @OA\Parameter(name="parent_id",in="query", description="上级菜单id",@OA\Schema(type="string")),
      *     @OA\Response(response=200,description="添加成功"),
      *     @OA\Response(response=422,description="错误的凭证响应")
@@ -51,6 +54,9 @@ class MenusController extends ApiController
      * @OA\Post(path="/api/menus/{menu}",description="添加菜单",summary="添加菜单",security={ {"bearer": {} }},tags={"菜单"},
      *     @OA\Parameter(name="id",in="query", description="菜单id",required=true, example="1",@OA\Schema(type="integer")),
      *     @OA\Parameter(name="name",in="query", description="菜单名",required=true,@OA\Schema(type="string")),
+     *     @OA\Parameter(name="icon",in="query", description="图标",@OA\Schema(type="string")),
+     *     @OA\Parameter(name="path",in="query", description="路径",@OA\Schema(type="string")),
+     *     @OA\Parameter(name="order",in="query", description="排序",@OA\Schema(type="string")),
      *     @OA\Parameter(name="parent_id",in="query", description="上级菜单id",@OA\Schema(type="string")),
      *     @OA\Response(response=200,description="添加成功"),
      *     @OA\Response(response=422,description="错误的凭证响应")

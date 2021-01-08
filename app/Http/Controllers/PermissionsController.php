@@ -28,6 +28,8 @@ class PermissionsController extends ApiController
      * @OA\Post(path="/api/permissions",description="添加权限",summary="添加权限",security={ {"bearer": {} }},tags={"权限"},
      *     @OA\Parameter(name="name",in="query", description="权限名称",required=true,@OA\Schema(type="string")),
      *     @OA\Parameter(name="slug",in="query", description="权限别称",required=true,@OA\Schema(type="string")),
+     *     @OA\Parameter(name="http_method",in="query", description="方法",@OA\Schema(type="string")),
+     *     @OA\Parameter(name="http_path",in="query", description="路径",@OA\Schema(type="string")),
      *     @OA\Response(response=200,description="添加成功"),
      *     @OA\Response(response=422,description="错误的凭证响应")
      * )
@@ -48,6 +50,8 @@ class PermissionsController extends ApiController
      *     @OA\Parameter(name="id",in="query", description="权限id",required=true, example="1",@OA\Schema(type="integer")),
      *     @OA\Parameter(name="name",in="query", description="权限名称",required=true,@OA\Schema(type="string")),
      *     @OA\Parameter(name="slug",in="query", description="权限别称",required=true,@OA\Schema(type="string")),
+     *     @OA\Parameter(name="http_method",in="query", description="方法",@OA\Schema(type="string")),
+     *     @OA\Parameter(name="http_path",in="query", description="路径",@OA\Schema(type="string")),
      *     @OA\Response(response=200,description="修改成功"),
      * )
      * @param PermissionRequest $request

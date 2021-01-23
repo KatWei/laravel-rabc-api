@@ -99,6 +99,10 @@ class RolesController extends ApiController
 
 
     /**
+     *
+     * @OA\Get(path="/api/all_roles",description="获取角色列表「无分页」",tags={"角色"},security={{"bearer_token": {}}},summary="角色列表",
+     *     @OA\Response(response=200,description="角色列表")
+     * )
      * 获取所有角色
      * @return mixed
      */

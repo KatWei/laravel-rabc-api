@@ -838,6 +838,26 @@
                     }
                 ]
             }
+        },
+        "/api/all_roles": {
+            "get": {
+                "tags": [
+                    "角色"
+                ],
+                "summary": "角色列表",
+                "description": "获取角色列表「无分页」",
+                "operationId": "App\\Http\\Controllers\\RolesController::getAllRole",
+                "responses": {
+                    "200": {
+                        "description": "角色列表"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
         }
     },
     "components": {

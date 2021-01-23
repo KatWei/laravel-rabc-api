@@ -18,7 +18,7 @@ class RoleRequest extends FormRequest
         switch ($this->method()) {
             case 'POST':
                 return [
-                    'name' => 'required|unique:roles, name'
+                    'name' => 'required|unique:roles,name'
                 ];
             case 'PATCH':
                 $role = $this->route('role');

@@ -21,6 +21,12 @@ class MenusController extends ApiController
         return $this->success(MenuResource::collection($menus));
     }
 
+    /**
+     * @OA\Get(path="/api/all_menus",description="菜单层级列表",tags={"菜单"},security={{"bearer_token": {}}},summary="菜单层级列表",
+     *     @OA\Response(response=200,description="菜单列表")
+     * )
+     * @return mixed
+     */
     public function getAllMenu()
     {
         $menu = new Menu();
@@ -69,5 +75,24 @@ class MenusController extends ApiController
     {
         $menu->update($request->all());
         return $this->success('修改成功');
+    }
+
+    /**
+     * @OA\Delete(path="/api/menus/ids_destroy",description="删除菜单",summary="删除菜单",security={ {"bearer": {} }},tags={"权限"},
+     *     @OA\Parameter(name="ids",in="query", description="菜单id",required=true, example="1",@OA\Schema(type="integer")),
+     *     @OA\Response(response=200,description="删除成功"),
+     * )
+     * @param $id
+     * @return mixed
+     */
+    public function destroy($id)
+    {
+        if($id == "ids_destroy") {
+            Menu::destroy(request('ids'));
+        } else {
+            Menu::destroy($id);
+        }
+
+        return $this->message("删除成功！");
     }
 }

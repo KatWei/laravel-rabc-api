@@ -23,14 +23,14 @@ Route::group([
     'middleware' => [
         'auth:admin-api',
         'cors',
-//        'admin.permission'
+        'admin.permission'
     ]
 ], function(){
 
     Route::get('/user', [AdminUsersController::class, 'show']);
     Route::resource('/admin_users', AdminUsersController::class)->only('index', 'store', 'update', 'destroy');
     Route::get('/menus/all_menus', [MenusController::class, 'getAllMenu']);
-    Route::resource('/menus', MenusController::class);
+    Route::resource('/menus', MenusController::class)->only('index', 'store', 'update', 'destroy');
     Route::get('/roles/all_roles', [RolesController::class, 'getAllRole']);
     Route::resource('/roles', RolesController::class)->only('index', 'store', 'update', 'destroy');
     Route::resource('/permissions', PermissionsController::class)->only('index', 'store', 'update', 'destroy');

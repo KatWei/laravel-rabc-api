@@ -42,7 +42,7 @@ class AdminUsersController extends ApiController
         $user = auth('admin-api')->user();
         $menu = new Menu();
         $menuTree = $menu->toTree();
-        if(!isset($menuTree))
+        if(!empty($menuTree))
             $user['menus'] = $this->filterMenu($menuTree, $user);
         return $this->success($user);
     }

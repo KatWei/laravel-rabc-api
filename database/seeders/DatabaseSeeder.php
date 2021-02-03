@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\AdminUser;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,6 +14,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        AdminUser::factory()->count(2)->create();
+        $user = AdminUser::find(1);
+        $user->name = 'admin';
+        $user->username = 'peryiqiao';
+        $user->save();
     }
 }

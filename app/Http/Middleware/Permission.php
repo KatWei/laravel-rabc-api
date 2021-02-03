@@ -62,7 +62,6 @@ class Permission
             'auth/login',
             'auth/logout',
         ];
-
         return collect($excepts)
             ->map(function($path, $key) {
                 return env('APP_URL').'/api/'.$path;

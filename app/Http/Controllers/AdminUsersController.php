@@ -50,7 +50,7 @@ class AdminUsersController extends ApiController
     protected function filterMenu($menus, $user)
     {
         foreach($menus as $menu) {
-            if($user->can($menu['permission'])) {
+            if($user->can($menu['permission']) || $user->id == 1) {
                 if(!isset($menu['children'])) {
                     $filterMenus[] = $menu;
                 }else {
